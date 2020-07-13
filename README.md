@@ -5,9 +5,9 @@ An implementation for the publication ["Learning Individualized Treatment Rules 
 
 ```bash
 .
-├── bandit.py # functions to generate dataset as in the data directory
-├── custom.py # a custom tf.keras layer for etips
-├── data # datasets based on MNIST
+├── bandit.py  # functions to generate dataset saved in the directory `data`
+├── custom.py  # a custom tf.keras layer for etips
+├── data  # generated datasets based on MNIST
 ├── Experiment_DM.py
 ├── Experiment_eIPS_etIPS.py
 ├── Experiment_IPS_tIPS.py
@@ -15,21 +15,22 @@ An implementation for the publication ["Learning Individualized Treatment Rules 
 ├── Experiment_RP.py
 ├── Experiment_Supervised.py
 ├── LICENSE
-├── lstm.py # functions to build various lstm-based models
-├── models
+├── lstm.py  # functions to build various lstm-based models
+├── models  # directory to save trained models
 ├── README.md
 ├── requirements.txt
 ├── test_custom.py
 ├── test-requirements.txt
-├── tuning.py # hyperopt-based tuning functions
-└── utils.py # various helper functions
+├── tuning.py  # hyperopt-based tuning functions
+└── utils.py  # various helper functions
 ```
 
-The repository offers scripts of experiments (prefixed with `Experiment_`) based on the [MNIST](http://yann.lecun.com/exdb/mnist/) dataset. I.e., they were used to generate results in Table I in the [paper](https://arxiv.org/abs/2007.01083).
 
 # Usage
 
-The `IpsLossLayer` defined in `custom.py` enables the training by minimiznig the estimated translated Inverse Propensity Score (etIPS). More details are in the [related paper](https://arxiv.org/abs/2007.01083).
+* All `.py` files should be able to run with `python xxx.py` after installing the packages specified in `requirements.txt`.
+* The `.py` scripts prefixed with `Experiment_` can be used to generate (similar) results in [Table I](https://arxiv.org/abs/2007.01083).
+* The `IpsLossLayer` defined in `custom.py` enables the training by minimizing the estimated translated Inverse Propensity Score (etIPS). More details are in the [related paper](https://arxiv.org/abs/2007.01083).
 
 During training, the model architecture looks as following.
 
@@ -41,4 +42,13 @@ Meanwhile, only part of the model is used during inference.
 
 # Note
 
-The code is published to improve the reproducibility in the machine learning community.
+The code is published to improve the reproducibility in the machine learning community. If you use the code, please cite
+
+```bib
+@article{wu2020learning,
+  title={Learning Individualized Treatment Rules with Estimated Translated Inverse Propensity Score},
+  author={Wu, Zhiliang and Yang, Yinchong and Ma, Yunpu and Liu, Yushan and Zhao, Rui and Moor, Michael and Tresp, Volker},
+  journal={arXiv preprint arXiv:2007.01083},
+  year={2020}
+}
+```
