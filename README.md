@@ -45,10 +45,12 @@ Meanwhile, only part of the model is used during inference.
 The code is published to improve the reproducibility in the machine learning community. If you use the code, please cite
 
 ```bib
-@article{wu2020learning,
+@inproceedings{wu2020learning,
   title={Learning Individualized Treatment Rules with Estimated Translated Inverse Propensity Score},
   author={Wu, Zhiliang and Yang, Yinchong and Ma, Yunpu and Liu, Yushan and Zhao, Rui and Moor, Michael and Tresp, Volker},
-  journal={arXiv preprint arXiv:2007.01083},
-  year={2020}
+  booktitle={2020 IEEE International Conference on Healthcare Informatics (ICHI)},
+  pages={1--11},
+  organization={IEEE}
+}
 }
 ```
