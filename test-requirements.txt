@@ -1,6 +1,6 @@
 # conda create --name test python=3.6
 # pip install -r test-requirements.txt
 
-numpy == 1.16.4
+numpy == 1.22.0
 tensorflow == 1.14.0
 pytest == 5.0.1
